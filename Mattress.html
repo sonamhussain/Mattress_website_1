@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mattress Customization</title>
+  <link rel="stylesheet" href="style_2.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-left">
+        <h1 id="hero-title">Mattress Customization</h1>
+        <p>Customize your mattress by size, firmness, and material — built for your sleeping position.</p>
+
+        <div class="posture-row" role="tablist" aria-label="Sleeping posture">
+          <button class="posture active" data-posture="Side" aria-pressed="true">Side</button>
+          <button class="posture" data-posture="Back" aria-pressed="false">Back</button>
+          <button class="posture" data-posture="Stomach" aria-pressed="false">Stomach</button>
+        </div>
+      </div>
+
+      <div class="hero-right" aria-hidden="true">
+        <div class="mattress-preview">
+  <img src="images/mattress-hero.jpg" alt="Mattress preview" class="hero-img">
+        </div>
+       </div>
+    </section>
+
+    <!-- PRODUCT QUICK -->
+    <section class="product-quick" aria-labelledby="product-title">
+      <div class="controls">
+        <div class="control">
+          <label for="size">Size</label>
+          <select id="size" aria-label="Select mattress size">
+            <option value="Twin" data-mult="0.85">Twin</option>
+            <option value="Full" data-mult="1.0">Full</option>
+            <option value="Queen" data-mult="1.25" selected>Queen</option>
+            <option value="King" data-mult="1.45">King</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <div class="control" style="flex:1">
+            <label for="firm">Firmness</label>
+            <select id="firm" aria-label="Select firmness">
+              <option value="Soft" data-add="-100">Soft</option>
+              <option value="Medium" data-add="0" selected>Medium</option>
+              <option value="Firm" data-add="120">Firm</option>
+            </select>
+          </div>
+
+          <div class="control" style="flex:1">
+            <label for="material">Material</label>
+            <select id="material" aria-label="Select material">
+              <option value="Poly Foam" data-add="0">Poly Foam</option>
+              <option value="Memory Foam" data-add="120" selected>Memory Foam</option>
+              <option value="Latex" data-add="220">Natural Latex</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <p class="small-note">Compare or customize — price updates automatically.</p>
+        </div>
+      </div>
+
+      <div class="price-column">
+        <div class="price-area" aria-live="polite">
+          <div class="price" id="price">$799</div>
+          <div class="muted">Starting price</div>
+        </div>
+        <div class="actions">
+          <button class="btn" id="customizeBtn">Customize</button>
+          <button class="btn ghost" id="compareBtn">Compare</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARE -->
+    <section aria-labelledby="compare-title">
+      <div class="section-title">
+        <h2 id="compare-title">Compare Mattresses</h2>
+        <p class="muted">Compare different mattresses side by side</p>
+      </div>
+
+      <div class="cards">
+        <article class="card" aria-labelledby="p1">
+          <img src="images/mattress-pro.jpg" alt="Mattress Pro" class="thumb">
+          
+          <h3 id="p1">Mattress Pro</h3>
+          <p class="small-note">Medium Firm • 30% off</p>
+          <div class="price-row">
+            <div style="font-weight:700">$699</div>
+            <button class="btn blue" data-action="read" data-product="Mattress Comfort">Read More</button>
+
+          </div>
+        </article>
+
+        <article class="card" aria-labelledby="p2">
+         <img src="images/mattress-comfort.jpg" alt="Mattress Comfort" class="thumb">
+
+          <h3 id="p2">Mattress Comfort</h3>
+          <p class="small-note">Medium Firm • 30% off</p>
+          <div class="price-row">
+            <div style="font-weight:700">$799</div>
+            <button class="btn" data-action="read" data-product="Mattress Comfort">Read More</button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <!-- Modal Template -->
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="close" id="modalClose" title="Close">&times;</button>
+      <h4 id="modalTitle">Customize your mattress</h4>
+      <div class="meta">Summary of your selections</div>
+      <div id="modalContent" class="modal-content"></div>
+      <div class="modal-actions">
+        <button class="btn" id="buyBtn">Proceed to Buy</button>
+        <button class="btn ghost" id="closeGhost">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script_2.js"></script>
+</body>
+</html>

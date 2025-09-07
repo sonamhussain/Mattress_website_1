@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <div class="wrapper">
+
+    <!-- Top Navbar inside wrapper -->
+    <nav class="navbar">
+      <a href="index.html" class="nav-btn">🏠 Home</a>
+      <button class="nav-btn" onclick="goBack()">🔙 Back</button>
+    </nav>
+
+    <!-- Contact Container -->
+    <div class="contact-container">
+      <!-- Contact Details Section -->
+      <section class="contact-details">
+        <h1>Get in Touch</h1>
+        <p>If you have any queries, feel free to reach out to us.</p>
+
+        <div class="details-grid">
+          <div class="detail-box">
+            <h3>📍 Address</h3>
+            <p>123 Main Street, Lucknow, Uttar Pradesh, India</p>
+          </div>
+          <div class="detail-box">
+            <h3>📞 Phone</h3>
+            <p>+91 98765 43210</p>
+          </div>
+          <div class="detail-box">
+            <h3>📧 Email</h3>
+            <p>support@example.com</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Form Section -->
+      <section class="form-section">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+
+        <div id="formResult" class="result"></div>
+      </section>
+    </div>
+  </div>
+
+  <script src="contact.js"></script>
+</body>
+</html>
